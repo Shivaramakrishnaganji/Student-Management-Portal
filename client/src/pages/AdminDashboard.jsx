@@ -50,7 +50,7 @@ function AdminDashboard({ user, onLogout }) {
 
         <div className="row g-4">
           {cards.map((card, index) => (
-            <div className="col-md-4" key={index}>
+            <div className="col-12 col-sm-6 col-md-4" key={index}>
               <Link to={card.link} className="text-decoration-none">
                 <div className="card h-100 shadow-sm border-0 dashboard-card">
                   <div className="card-body text-center p-4">

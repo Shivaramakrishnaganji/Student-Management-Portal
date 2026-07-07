@@ -354,9 +354,167 @@ body {
 /* Login Page Custom Overlay */
 .login-page {
   background: var(--bg-gradient);
+  padding: 1rem;
 }
 
 .login-card {
   border: 1px solid rgba(229, 231, 235, 0.8) !important;
   box-shadow: var(--shadow-lg) !important;
 }
+
+/* ================================
+   RESPONSIVE / MOBILE STYLES
+   ================================ */
+
+/* Mobile: tighter container padding */
+@media (max-width: 576px) {
+  .container, .container-fluid {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  /* Page titles smaller on mobile */
+  h2.fw-bold {
+    font-size: 1.4rem !important;
+  }
+
+  /* Cards: reduce padding on mobile */
+  .card-body {
+    padding: 1rem !important;
+  }
+
+  .card-header {
+    font-size: 0.85rem !important;
+    padding: 12px 16px !important;
+  }
+
+  /* Tables: horizontal scroll on mobile */
+  .table-responsive {
+    -webkit-overflow-scrolling: touch;
+    border-radius: 0 0 16px 16px;
+  }
+
+  .table th, .table thead th {
+    padding: 10px 12px !important;
+    font-size: 0.7rem !important;
+    white-space: nowrap;
+  }
+
+  .table td {
+    padding: 10px 12px !important;
+    font-size: 0.8rem !important;
+    white-space: nowrap;
+  }
+
+  /* Buttons: stack vertically on small screens */
+  .d-flex.gap-2 {
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    font-size: 0.85rem !important;
+    padding: 8px 14px !important;
+  }
+
+  /* Forms: full width on mobile */
+  .form-control, .form-select {
+    font-size: 0.9rem !important;
+  }
+
+  /* Login card: full width on mobile */
+  .login-card {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Navbar: better spacing on mobile */
+  .custom-navbar {
+    padding: 10px 0 !important;
+  }
+
+  .custom-navbar .navbar-nav {
+    padding: 8px 0;
+    gap: 2px;
+  }
+
+  .custom-navbar .nav-link {
+    padding: 8px 12px !important;
+    border-radius: 8px;
+  }
+
+  /* User info & logout in navbar on mobile */
+  .navbar-user-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 0 4px;
+    border-top: 1px solid var(--border-color);
+    margin-top: 4px;
+    width: 100%;
+  }
+
+  /* Dashboard cards: ensure proper height on mobile */
+  .dashboard-card .card-body {
+    padding: 1.2rem !important;
+  }
+
+  .dashboard-card .card-body div[style] {
+    font-size: 2.2rem !important;
+  }
+
+  /* Stat badges on mobile */
+  .badge {
+    font-size: 0.7rem !important;
+    padding: 4px 8px !important;
+  }
+
+  /* Student dashboard attendance stats */
+  .row.g-3 .col-4 {
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+  }
+
+  /* Filter rows: stack on mobile */
+  .row.g-2.mb-3 .col-md-3,
+  .row.g-2.mb-3 .col-md-4 {
+    min-width: 100%;
+  }
+}
+
+/* Tablet: 2-column filter grids */
+@media (min-width: 577px) and (max-width: 768px) {
+  .table th, .table thead th {
+    padding: 10px 14px !important;
+    font-size: 0.72rem !important;
+  }
+
+  .table td {
+    padding: 10px 14px !important;
+    font-size: 0.82rem !important;
+  }
+
+  h2.fw-bold {
+    font-size: 1.5rem !important;
+  }
+}
+
+/* Navbar toggler icon style */
+.navbar-toggler {
+  border: 1.5px solid rgba(79, 70, 229, 0.3) !important;
+  border-radius: 8px !important;
+  padding: 6px 10px !important;
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 3px var(--primary-glow) !important;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(79, 70, 229, 0.85)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+/* Smooth navbar collapse animation */
+.navbar-collapse {
+  transition: all 0.25s ease !important;
+}
+

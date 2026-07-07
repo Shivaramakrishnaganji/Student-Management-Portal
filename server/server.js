@@ -10,6 +10,7 @@ const studentRoutes = require('./routes/studentRoutes');
 const subjectRoutes = require('./routes/subjectRoutes');
 const facultyRoutes = require('./routes/facultyRoutes');
 const attendanceRoutes = require('./routes/attendanceRoutes');
+const seedRoute = require('./routes/seedRoute');
 
 const app = express();
 
@@ -24,6 +25,7 @@ app.use('/api/students', studentRoutes);
 app.use('/api/subjects', subjectRoutes);
 app.use('/api/faculty-allocations', facultyRoutes);
 app.use('/api/attendance', attendanceRoutes);
+app.use('/api/seed', seedRoute);
 
 app.get('/', (req, res) => {
   res.json({ message: 'Student Management Portal API is running' });

@@ -39,7 +39,7 @@
 | **Frontend** | React, Vite, React Router, Axios, Bootstrap 5 |
 | **Backend** | Node.js, Express.js |
 | **Database** | MongoDB Atlas (Cloud) |
-| **Security** | speakeasy (TOTP), bcryptjs, JWT |
+| **Security** | speakeasy (TOTP) |
 | **Hosting** | Render (Frontend + Backend), MongoDB Atlas |
 
 ---

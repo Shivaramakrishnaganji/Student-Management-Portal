@@ -9,8 +9,10 @@ const {
   getBunkersList,
 } = require('../controllers/attendanceController');
 const { protect, authorize } = require('../middleware/authMiddleware');
+const { validate } = require('../middleware/validationMiddleware');
+const { markAttendanceSchema } = require('../validations/attendanceValidation');
 
-router.post('/', protect, authorize('faculty'), markAttendance);
+router.post('/', protect, authorize('faculty'), validate(markAttendanceSchema), markAttendance);
 router.get('/class', protect, authorize('faculty'), getClassAttendance);
 router.get('/student/:studentId', protect, getStudentAttendance);
 router.get('/my-attendance', protect, authorize('student'), getMyAttendance);
